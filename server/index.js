@@ -6,7 +6,7 @@ const path = require("path");
 
 
 app.use(cors({
-    origin: "https://inotes-ckzr.onrender.com/"
+    origin: "https://inotes-ckzr.onrender.com"
 }));
 
 // port no
