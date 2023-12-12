@@ -15,6 +15,9 @@ app.use(express.json());
 // function to connect with mongo database
 connectToMongo();
 
+app.use("/", (req, res) =>{
+  res.send("hello world");
+}
 // routes for the user -> login and register
 app.use("/api/auth", require("./routes/authRouter"));
 
@@ -33,4 +36,5 @@ app.get("*", (req, res)=>{
 
 // starts the server on the port no 5000
 app.listen(PORT, (req, res)=>{
+  console.log("Server started on port ", PORT);
 })
