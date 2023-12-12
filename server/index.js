@@ -15,7 +15,7 @@ app.use(express.json());
 // function to connect with mongo database
 connectToMongo();
 
-app.use("/", (req, res) =>{
+app.use("/hello", (req, res) =>{
   res.send("hello world");
 })
 // routes for the user -> login and register
