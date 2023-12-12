@@ -4,16 +4,7 @@ const connectToMongo = require("./db");
 const cors = require("cors");
 const path = require("path");
 
-
-app.use(cors({
-    origin: "https://inotes-ckzr.onrender.com"
-}));
-
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
-
+app.use(cors());
 
 // port no
 const PORT = process.env.PORT;
