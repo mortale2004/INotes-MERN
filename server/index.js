@@ -9,6 +9,12 @@ app.use(cors({
     origin: "https://inotes-ckzr.onrender.com"
 }));
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
+
 // port no
 const PORT = process.env.PORT;
 
