@@ -17,7 +17,7 @@ connectToMongo();
 
 app.use("/", (req, res) =>{
   res.send("hello world");
-}
+})
 // routes for the user -> login and register
 app.use("/api/auth", require("./routes/authRouter"));
 
