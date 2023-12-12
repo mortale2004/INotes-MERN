@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// schema to create specifiec structure for every message
 const MessageSchema = mongoose.Schema({
     user:{
         type: mongoose.Schema.ObjectId,
@@ -24,5 +25,6 @@ const MessageSchema = mongoose.Schema({
     }
 })
 
+// export model created from MessageSchema 
 module.exports = mongoose.model("message", MessageSchema);
 
